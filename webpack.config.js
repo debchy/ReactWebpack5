@@ -1,3 +1,4 @@
+//ref:https://imranhsayed.medium.com/set-up-react-app-with-webpack-webpack-dev-server-and-babel-from-scratch-df398174446d 
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
@@ -16,7 +17,7 @@ module.exports = (env, argv) =>{
         devtool: mode === 'development' ? 'eval-source-map' : false,
         
         devServer: {
-            //historyApiFallback: true,
+            historyApiFallback: true,
             port: 9000,
             compress: true,
             static:'./dist',

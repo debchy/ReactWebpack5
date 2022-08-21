@@ -1,14 +1,19 @@
 import React from 'react';
+import Router from './Router';
 import Content from './components/Content';
 
 export default class App extends React.Component {
- render() {
-  return(
-   <div>
-    <p>My Test Component</p>
-    <Content></Content>
-   </div>
-   
-  );
- }
+    render() {
+        return(
+            <>
+                <h1>App Header</h1>
+                <Router /> 
+                
+                <hr></hr>
+                <small>Footer</small>
+            </>
+            
+        );
+    }
 }
+

@@ -4,11 +4,13 @@ import ReactDom from 'react-dom';
 export default class Content extends React.Component{
     constructor(props){
         super(props);
+        this.emailAddress=React.createRef();
+        this.comments=React.createRef();
     }
 
     onClick=(e)=>{
-        console.log("txtEmailAddress",ReactDom.findDOMNode(this.refs.emailAddress).value);
-        console.log("txtComments",ReactDom.findDOMNode(this.refs.comments).value);
+        console.log("txtEmailAddress",ReactDom.findDOMNode(this.emailAddress.current).value);
+        console.log("txtComments",ReactDom.findDOMNode(this.comments.current).value);
     }
     
     render(){
@@ -17,10 +19,10 @@ export default class Content extends React.Component{
             <div className='well'>
                 <p>{this.prompt}</p>
                 <div className='form-group'>
-                    Email: <input ref="emailAddress" className='form-control' type='text' placeholder="email address"></input>
+                    Email: <input ref={this.emailAddress} className='form-control' type='text' placeholder="email address"></input>
                 </div>
                 <div className='form-group'>
-                    Comments: <input ref="comments" className='form-control' type='text' placeholder="Put your comments"></input>
+                    Comments: <input ref={this.comments} className='form-control' type='text' placeholder="Put your comments"></input>
                 </div>
                 <div className='form-group'>
                     <button className='btn btn-primary' onClick={this.onClick}>Submit</button>
