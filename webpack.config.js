@@ -6,7 +6,11 @@ module.exports = (env, argv) =>{
     const mode = argv.mode || 'development'
     const config={
         context: __dirname,
-        entry: './src/index.js',
+        entry: {
+            'index':{import:'./src/index.js', dependOn: 'react-vendors'},
+            'react-vendors':['react','react-dom','react-router-dom'],
+            'bootstrap':'bootstrap'
+        },        
         output: {
             path: path.resolve(__dirname, 'dist'),
             filename: '[name].bundle.js',
