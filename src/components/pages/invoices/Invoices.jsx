@@ -16,6 +16,7 @@ export default class Invoices extends React.Component{
 
     render(){
         let invoices= getInvoices();
+        
         return <main style={{ padding: "1rem 0" }}>
             <h2>Invoices</h2>
             <div style={{display:'flex'}}>

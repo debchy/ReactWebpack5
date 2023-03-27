@@ -13,7 +13,7 @@ export default class AppLayout extends React.Component{
                 <nav style={{borderBottom: "solid 1px", paddingBottom: '1rem'}}>
                     <NavLink to='/' >Home</NavLink> |{" "}
                     <NavLink to='/invoices'>Invoices</NavLink> |{" "}
-                    <NavLink to='/expenses'>Expenses</NavLink>
+                    <NavLink to='/counter'>Redux Counter</NavLink>
                 </nav>
                 <Outlet></Outlet>
             </>

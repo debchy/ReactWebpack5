@@ -13,7 +13,7 @@ class Invoice extends React.Component{
     render(){        
         let invoice= getInvoice(parseInt(this.props.params.invoiceId,10));
         console.log("invoice",invoice);
-        return <main style={{ padding: "1rem 0" }}>
+        return <main style={{ padding: "1rem 1rem" }}>
             <h2>Invoice -- {invoice.number}</h2>
             <h3>Total Due: {invoice.amount}</h3>
             <p>
