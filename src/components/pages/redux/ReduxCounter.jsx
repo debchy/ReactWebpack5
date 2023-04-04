@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect} from 'react-redux';
-import actions from '../../../actions/counter-actions';
+import actions from '../../../reducers/counter-actions';
 
 //redux ref: https://medium.com/@rrohit.maheshwari/react-app-using-redux-e6a1a69822d1
 

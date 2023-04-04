@@ -1,4 +1,4 @@
-import { actionTypes } from '../actions/counter-actions.js'
+import { actionTypes } from './counter-actions.js'
 const counter = (state={count:0,incrementBy:0}, action) => {
     switch (action.type) {
       case actionTypes.INCREMENT:
