@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect} from 'react-redux';
-import actions from '../../../reducers/counter-actions';
+//import actions from '../../../reducers/counter-actions';
+import { counterActions  } from '../../../store'
 
 //redux ref: https://medium.com/@rrohit.maheshwari/react-app-using-redux-e6a1a69822d1
 
@@ -11,19 +12,19 @@ class ReduxCounter extends React.Component{
         this.onChangeCount=this.onChangeCount.bind(this);
     }
     onClickAddCount(){
-        this.props.dispatch(actions.incrementBy())
+        this.props.dispatch(counterActions.incrementBy())
         //this.setState({ count: this.state.count + this.state.incrementBy })
     }
     onClickIncrement(){
-        this.props.dispatch(actions.increment())
+        this.props.dispatch(counterActions.increment())
         //this.setState({ count: this.state.count + 1 })
     }
     onClickDecrement(){
-        this.props.dispatch(actions.decrement())
+        this.props.dispatch(counterActions.decrement())
         //this.setState({ count: this.state.count -1 })
     }
     onChangeCount(amount){
-        this.props.dispatch(actions.changeAmount(amount))
+        this.props.dispatch(counterActions.changeAmount(amount))
         //this.setState({ count: this.state.count -1 })
     }
     render(){
