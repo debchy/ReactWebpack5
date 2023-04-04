@@ -1,12 +1,13 @@
+import { actionTypes } from '../actions/counter-actions.js'
 const counter = (state={count:0,incrementBy:0}, action) => {
     switch (action.type) {
-      case "INCREMENT":
+      case actionTypes.INCREMENT:
         return {...state, count : state.count + 1};
-      case "DECREMENT":
+      case actionTypes.DECREMENT:
         return {...state, count : state.count - 1};
-      case "INCREMENT_BY":
+      case actionTypes.INCREMENT_BY:
         return {...state, count : state.count + state.incrementBy};
-      case "CHNAGE_AMOUNT":
+      case actionTypes.CHNAGE_AMOUNT:
         return {...state, incrementBy : action.payload};
       default:
         return state;

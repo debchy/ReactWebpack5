@@ -2,6 +2,8 @@ import React from 'react';
 import { connect} from 'react-redux';
 import actions from '../../../actions/counter-actions';
 
+//redux ref: https://medium.com/@rrohit.maheshwari/react-app-using-redux-e6a1a69822d1
+
 class ReduxCounter extends React.Component{
     
     constructor(props){
@@ -31,14 +33,14 @@ class ReduxCounter extends React.Component{
         return <main style={{ padding: "1rem 0" }}>
             <h2>Counter with Redux</h2>
             <label>Counter is {count}</label>
-            <span style={{display:"flex"}}>
-                <button onClick={this.onClickIncrement.bind(this)}>Increment</button>
-                <button onClick={this.onClickDecrement.bind(this)}>Decrement</button>
+            <span style={{display:"flex"}} className="p-1">
+                <button className='btn btn-info me-sm-1' onClick={this.onClickIncrement.bind(this)}>Increment</button>
+                <button className='btn btn-danger' onClick={this.onClickDecrement.bind(this)}>Decrement</button>
             </span>
             
-            <span style={{display:"flex"}}>
-                <input type="number" placeholder='Add a number' value={incrementBy} onChange={e => this.onChangeCount( parseInt( e.target.value) )} />            
-                <button onClick={this.onClickAddCount.bind(this)}>Add amount</button>
+            <span style={{display:"flex"}} className="p-1">
+                <input className='me-sm-1' type="number" placeholder='Add a number' value={incrementBy} onChange={e => this.onChangeCount( parseInt( e.target.value) )} />            
+                <button className='btn btn-success' onClick={this.onClickAddCount.bind(this)}>Add amount</button>
             </span>
             
         </main>
