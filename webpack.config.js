@@ -26,6 +26,13 @@ module.exports = (env, argv) =>{
             compress: true,
             static:'./dist',
             hot: true,
+            //liveReload: false,
+            client: {
+                progress: true,
+            },
+        },
+        optimization: {
+            runtimeChunk: 'single'
         },
         module: {
             rules: [
